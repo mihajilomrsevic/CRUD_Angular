@@ -26,12 +26,10 @@ export class EmployeeService {
     return this.http.post(`${this.adresa}` + '/create', employeeModel);
   }
 
-  // radi u Postman ali nece u View ne znam zasto, kaze u konzoli da metoda nije dozvoljena a Postman je odradi
   deleteEmployee(id: number){
     return this.http.delete(`${this.adresa}/delete/${id}`);
   }
-  // ovde se nisam snasao u View najbolje tako da sam zakomentarisao
-  // takodje nisam mogao da pristupim na stranici API odeljku Details pa nisam mogao da vidim jel vrsi Update nad atributima imenovanima kao
+  // nisam mogao da pristupim na stranici API odeljku Details pa nisam mogao da vidim jel vrsi Update nad atributima imenovanima kao
   // u getEmployees employee_name, employee_age... ili nad atributima name, age
   updateEmployee(employeeDto: Employee) {
     return this.http.put(`${this.adresa}` + '/update/' + `${employeeDto.id}`, employeeDto);
