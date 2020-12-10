@@ -1,0 +1,16 @@
+
+<div class="forma">
+  <form #editForm="ngForm" id="editForm" (ngSubmit)="updateEmployee(employeeUpdate)">
+    <h4>Name: </h4>
+    <input type="text" class="form-control" [(ngModel)]="employeeUpdate.employee_name" name="name"/>
+
+    <h4>Salary: </h4>
+    <input type="number" class="form-control" [(ngModel)]="employeeUpdate.employee_salary" name="salary"/>
+
+    <h4>Age:</h4>
+    <input type="number" class="form-control" [(ngModel)]="employeeUpdate.employee_age" name="age"/>
+    <button form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+
+  </form>
+</div>
+-->
